@@ -12,7 +12,7 @@
    /**
     * @class IPSComponentShutter_EIB
     *
-    * Definiert ein IPSComponentShutter_EIB Object, das ein IPSComponentShutter Object f�r EIB implementiert.
+    * Definiert ein IPSComponentShutter_EIB Object, das ein IPSComponentShutter Object für EIB implementiert.
     *
     * @author Andreas Brauneis
     * @version
@@ -32,7 +32,7 @@
 		 * Initialisierung eines IPSComponentShutter_EIB Objektes
 		 *
 		 * @param integer $instanceId1 InstanceId des EIB Devices 
-		 * @param integer $instanceId2 InstanceId 2 des EIB Devices (Richtungs Relais f�r den Fall das normale EIB Switches verwendet werden)
+		 * @param integer $instanceId2 InstanceId 2 des EIB Devices (Richtungs Relais für den Fall das normale EIB Switches verwendet werden)
 		 * @param boolean $reverseControl Richtungs Schalter (default=false)
 		 */
 		public function __construct($instanceId1, $instanceId2='', $reverseControl=false) {
@@ -49,7 +49,7 @@
 		 * Function um Events zu behandeln, diese Funktion wird vom IPSMessageHandler aufgerufen, um ein aufgetretenes Event 
 		 * an das entsprechende Module zu leiten.
 		 *
-		 * @param integer $variable ID der ausl�senden Variable
+		 * @param integer $variable ID der auslösenden Variable
 		 * @param string $value Wert der Variable
 		 * @param IPSModuleShutter $module Module Object an das das aufgetretene Event weitergeleitet werden soll
 		 */
@@ -58,14 +58,14 @@
 				$module->SyncPosition(100-$value, $this);
 			} else {
 				$module->SyncPosition($value, $this);
-		    }
+			}
 		}
 
 		/**
 		 * @public
 		 *
 		 * Funktion liefert String IPSComponent Constructor String.
-		 * String kann dazu ben�tzt werden, das Object mit der IPSComponent::CreateObjectByParams
+		 * String kann dazu benützt werden, das Object mit der IPSComponent::CreateObjectByParams
 		 * wieder neu zu erzeugen.
 		 *
 		 * @return string Parameter String des IPSComponent Object
