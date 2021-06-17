@@ -70,7 +70,7 @@
 	 * 
 	 * Parameter kann jederzeit geändert werden.
 	 */
-	define ("c_Style_HtmlOutColor", '#FFFFFF')
+	define ("c_Style_HtmlOutColor", '#FFFFFF');
 
 	/** Konfigurations Parameter f�r File Output
 	 *
