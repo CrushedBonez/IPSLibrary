@@ -630,7 +630,17 @@
 			if ($variableId===false) {
 				$moduleManager->LogHandler()->Log('Variable with Name LEVEL could NOT be found for Homematic Instance='.$instanceId);
 			} else {
-				$moduleManager->LogHandler()->Log('Register OnChangeEvent vor Homematic Instance='.$instanceId);
+				$moduleManager->LogHandler()->Log('Register OnChangeEvent for Homematic Instance='.$instanceId);
+				$messageHandler->RegisterOnChangeEvent($variableId, $component, 'IPSModuleShutter_IPSShadowing,');
+			}
+		// EIB
+		} elseif ($componentClass=='IPSComponentShutter_EIB') {
+			$instanceId = IPSUtil_ObjectIDByPath($componentParams[1]);
+			$variableId = @IPS_GetObjectIDByName('Position', $instanceId);
+			if ($variableId===false) {
+				$moduleManager->LogHandler()->Log('Variable with Name Position could NOT be found for EIB Instance='.$instanceId);
+			} else {
+				$moduleManager->LogHandler()->Log('Register OnChangeEvent for EIB Instance='.$instanceId);
 				$messageHandler->RegisterOnChangeEvent($variableId, $component, 'IPSModuleShutter_IPSShadowing,');
 			}
 		} else {
