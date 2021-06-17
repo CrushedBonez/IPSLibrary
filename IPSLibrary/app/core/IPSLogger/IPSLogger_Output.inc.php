@@ -299,7 +299,7 @@
 			SetValue($LogId, $CurrentMsgId);
 
 			//Msg ...
-			$Out =  '<tr id="'.$CurrentMsgId.'" style="color:#FFFFFF;">';
+			$Out =  '<tr id="'.$CurrentMsgId.'" style="color:'. c_Style_HtmlOutColor .';">';
 			$Out .=    '<td>'.date('Y-m-d H:i').'</td>';
 			$Out .=    '<td>'.$Msg.'</td>';
 			$Out .= '</tr>';
